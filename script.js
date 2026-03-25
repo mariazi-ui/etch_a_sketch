@@ -15,4 +15,4 @@ function createGrid(gridSize) {
 
 }
 
-createGrid();
+createGrid(16);
