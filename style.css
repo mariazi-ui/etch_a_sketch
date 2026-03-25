@@ -26,7 +26,8 @@ header {
 
 .square {
     position: relative;
-    flex: 0 0 calc(100% / var(--grid-size));    
+    flex: 0 0 calc(100% / var(--grid-size));  
+    height: calc(500px / var(--grid-size));  
     margin: 0;
     border: 1px solid lightgray;
     background-color: white;
@@ -34,14 +35,9 @@ header {
 }
 
 .square::before {
-    display: block;
-    padding-top: 100%;
+    display: none;
 }
 
-.square .content {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
+.square:hover {
+    background-color: black;
 }

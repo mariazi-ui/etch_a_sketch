@@ -3,15 +3,28 @@ const rightButton = document.getElementById("right");
 
 function createGrid(gridSize) {
     let container = document.querySelector(".container");
-    container.style.setProperty("--grid-size",gridSize)
+    container.innerHTML = '';
+    container.style.setProperty("--grid-size", gridSize);
 
     let square;
 
     for (let i = 0; i < (gridSize*gridSize); i++) {
         square = document.createElement('div');
-        container.appendChild(square).className = "square";
+        square.className = "square";
+        container.appendChild(square);
+    
     }
-
 }
 
 createGrid(16);
+
+const squares = document.querySelectorAll('.square');
+
+squares.forEach(square => {
+    square.addEventListener('mouseover', () => {
+        square.style.backgroundColor = 'black';
+    });
+})
+
+
+
