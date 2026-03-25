@@ -3,12 +3,11 @@ const rightButton = document.getElementById("right");
 
 function createGrid(gridSize) {
     let container = document.querySelector(".container");
+    container.style.setProperty("--grid-size",gridSize)
 
-    let rows = gridSize;
-    let cols = gridSize;
     let square;
 
-    for (let i = 0; i < (rows * cols); i++) {
+    for (let i = 0; i < (gridSize*gridSize); i++) {
         square = document.createElement('div');
         container.appendChild(square).className = "square";
     }
